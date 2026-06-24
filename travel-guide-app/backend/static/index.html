@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 여행 가이드</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>AI 여행 가이드</h1>
+      <p>궁금한 여행지를 물어보세요.</p>
+    </header>
+
+    <main>
+      <textarea id="questionInput" placeholder="예: 덕수궁에 대해서 설명해줘"></textarea>
+
+      <button id="askButton">가이드 설명 듣기</button>
+
+      <section class="answer-box">
+        <h2>가이드 답변</h2>
+        <div id="loading" class="hidden">설명을 준비하고 있습니다...</div>
+        <p id="answerText">아직 질문이 없습니다.</p>
+      </section>
+
+      <button id="speakButton">답변 음성으로 읽기</button>
+    </main>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
