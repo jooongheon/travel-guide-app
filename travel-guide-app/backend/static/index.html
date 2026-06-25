@@ -5,27 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI 여행 가이드</title>
   <link rel="stylesheet" href="/static/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#111111" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="AI 여행 가이드" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="icon" href="/static/icons/icon-192.png" type="image/png" />
 </head>
+
 <body>
   <div class="app">
-    <header>
-      <h1>AI 여행 가이드</h1>
-      <p>궁금한 여행지를 물어보세요.</p>
+    <header class="app-header">
+      <div class="header-top">
+        <div class="header-title">
+          <p class="eyebrow">AI TRAVEL GUIDE</p>
+          <h1>AI 여행 가이드</h1>
+        </div>
+
+      </div>
+
+      <p class="header-desc">
+        여행지 이름을 입력하면 실제 가이드처럼 역사, 배경, 볼거리까지 설명해드립니다.
+      </p>
     </header>
 
-    <main>
-      <textarea id="questionInput" placeholder="예: 덕수궁에 대해서 설명해줘"></textarea>
+    <main class="main-content">
+      <section class="question-card">
+        <label for="questionInput" class="input-label">어디가 궁금하신가요?</label>
 
-      <button id="askButton">가이드 설명 듣기</button>
+        <textarea
+          id="questionInput"
+          placeholder="예: 덕수궁에 대해서 설명해줘&#10;예: 경복궁 근처에서 볼 만한 곳 알려줘"
+        ></textarea>
 
-      <section class="answer-box">
-        <h2>가이드 답변</h2>
-        <div id="loading" class="hidden">설명을 준비하고 있습니다...</div>
-        <p id="answerText">아직 질문이 없습니다.</p>
+        <div class="hint-row">
+          <span>추천 질문</span>
+          <span>역사 · 건축 · 주변 동선</span>
+        </div>
+
+        <button id="askButton" class="primary-button">
+          가이드 설명 생성하기
+        </button>
       </section>
 
-      <button id="speakButton">답변 음성으로 읽기</button>
+      <section class="answer-box">
+        <div class="answer-header">
+          <div>
+            <p class="section-label">GUIDE ANSWER</p>
+            <h2>가이드 답변</h2>
+          </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+          <div class="spinner"></div>
+          <span>설명을 준비하고 있습니다...</span>
+        </div>
+
+        <p id="answerText" class="answer-text">
+          아직 질문이 없습니다. 위에 여행지를 입력해보세요.
+        </p>
+      </section>
     </main>
+
+    <div class="bottom-action">
+      <button id="speakButton" class="secondary-button">
+        답변 음성으로 듣기
+      </button>
+    </div>
   </div>
 
   <script src="/static/script.js"></script>

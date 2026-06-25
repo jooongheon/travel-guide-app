@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "AI 여행 가이드",
+  "short_name": "여행가이드",
+  "description": "여행지의 역사와 관람 포인트를 가이드처럼 설명해주는 AI 여행 가이드 앱",
+  "lang": "ko-KR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f5",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/static/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
